@@ -1,0 +1,27 @@
+# name: Build
+
+# on:
+#   - push
+
+# jobs:
+#   build:
+#     name: Build Full Kubeflow Distribution
+#     runs-on: ubuntu-latest
+
+#     steps:
+#     - name: Check out repo
+#       uses: actions/checkout@v2
+
+#     - uses: azure/setup-kubectl@v1
+#       # with:
+#       #   version: '<version>' # default is latest stable
+#       id: install
+#     - name: Unit Test
+#       run: |
+#         mkdir -p full
+#         kubectl kustomize example > full/rendered.yaml
+#         git add full
+#         git commit -m 'Updates full distro `${GITHUB_SHA}`'
+#         git push
+
+
