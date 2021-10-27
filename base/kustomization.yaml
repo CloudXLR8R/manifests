@@ -6,6 +6,6 @@ resources:
 - ../common/cert-manager/cert-manager/base
 - ../common/cert-manager/kubeflow-issuer/base
 # # Istio
-# - ../common/istio-1-9/istio-crds/base
-# - ../common/istio-1-9/istio-namespace/base
+- ../common/istio-1-9/istio-crds/base
+- ../common/istio-1-9/istio-namespace/base
 # - ../common/istio-1-9/istio-install/base
