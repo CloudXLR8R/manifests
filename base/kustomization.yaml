@@ -14,9 +14,10 @@ resources:
 
 
 
-##### causing the problem: Dex - ../common/dex/overlays/istio #####
+##### causing a problem: Dex - ../common/dex/overlays/istio #####
 # Dex
 # - ../common/dex/overlays/istio
+# kustomization/infrastructure    False   ClusterIssuer/cert-manager/kubeflow-self-signing-issuer dry-run failed, error: failed to prune fields: failed add back owned items: failed to convert pruned object at version cert-manager.io/v1alpha2: conversion webhook for cert-manager.io/v1, Kind=ClusterIssuer returned invalid metadata: invalid metadata of type <nil> in input object main/56591f9a737da073f8fbf2fbc07883a4165c0e17    False
 
 # KNative: is used by the KFServing official Kubeflow component.
 # Optionally, you can install Knative Eventing which can be used for inference request logging:
@@ -25,10 +26,12 @@ resources:
 - ../common/knative/knative-serving/overlays/gateways
 - ../common/istio-1-9/cluster-local-gateway/base
 
+##### causing a problem: Kubeflow namepace or Roles #####
+# kustomization/infrastructure    False   ClusterIssuer/cert-manager/kubeflow-self-signing-issuer dry-run failed, error: failed to prune fields: failed add back owned items: failed to convert pruned object at version cert-manager.io/v1alpha2: conversion webhook for cert-manager.io/v1, Kind=ClusterIssuer returned invalid metadata: invalid metadata of type <nil> in input object main/b52cd64534fd5f9ab82e50b96ed9c80800e702f7    False
 # Kubeflow namespace
-- ../common/kubeflow-namespace/base
+# - ../common/kubeflow-namespace/base
 # Kubeflow Roles
-- ../common/kubeflow-roles/base
-##### problem???
+# - ../common/kubeflow-roles/base
+
 # Kubeflow Istio Resources
 - ../common/istio-1-9/kubeflow-istio-resources/base
