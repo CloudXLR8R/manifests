@@ -3,12 +3,12 @@ kind: Kustomization
 
 resources:
 # Cert-Manager
-- ../common/cert-manager/cert-manager/base
+# - ../common/cert-manager/cert-manager/base
 - ../common/cert-manager/kubeflow-issuer/base
-# Istio
-- ../common/istio-1-9/istio-crds/base
-- ../common/istio-1-9/istio-namespace/base
-- ../common/istio-1-9/istio-install/base
+# # Istio
+# - ../common/istio-1-9/istio-crds/base
+# - ../common/istio-1-9/istio-namespace/base
+# - ../common/istio-1-9/istio-install/base
 # OIDC Authservice
 - ../common/oidc-authservice/base
 # Dex
@@ -51,5 +51,5 @@ resources:
 - ../apps/training-operator/upstream/overlays/kubeflow
 # MPI Operator
 - ../apps/mpi-job/upstream/overlays/kubeflow
-# User namespace
-- ../common/user-namespace/base
+# User namespace (used by kfctl which is deprecated so getting rid of)
+# - ../common/user-namespace/base
