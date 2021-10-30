@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
 - upstream/serving-core.yaml
 - upstream/net-istio.yaml
-- istio-authorization-policy.yaml
+# - istio-authorization-policy.yaml
 patchesStrategicMerge:
 - patches/configmap-patch.yaml
 - patches/namespace-injection.yaml
