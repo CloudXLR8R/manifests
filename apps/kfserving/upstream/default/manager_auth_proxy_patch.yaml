@@ -5,7 +5,8 @@ kind: StatefulSet
 metadata:
   name: kfserving-controller-manager
   namespace: kfserving-system
-  kustomize.toolkit.fluxcd.io/prune: disabled
+  annotations:
+    kustomize.toolkit.fluxcd.io/prune: disabled
 spec:
   template:
     spec:

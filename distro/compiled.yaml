@@ -35840,7 +35840,6 @@ metadata:
     controller-gen.kubebuilder.io/version: v0.3.1-0.20200528125929-5c0c6ae3b64b
     kustomize.toolkit.fluxcd.io/prune: disabled
   creationTimestamp: null
-  kustomize.toolkit.fluxcd.io/prune: disabled
   labels:
     app: kfserving
     app.kubernetes.io/name: kfserving
@@ -63237,7 +63236,8 @@ spec:
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  kustomize.toolkit.fluxcd.io/prune: disabled
+  annotations:
+    kustomize.toolkit.fluxcd.io/prune: disabled
   labels:
     app: kfserving
     app.kubernetes.io/name: kfserving
