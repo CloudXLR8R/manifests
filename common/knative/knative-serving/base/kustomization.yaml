@@ -6,7 +6,7 @@ resources:
 # - istio-authorization-policy.yaml
 patchesStrategicMerge:
 - patches/configmap-patch.yaml
-- patches/namespace-injection.yaml
+# - patches/namespace-injection.yaml
 - patches/clusterrole-patch.yaml
 patches:
 - path: patches/sidecar-injection.yaml
