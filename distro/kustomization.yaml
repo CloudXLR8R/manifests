@@ -32,12 +32,14 @@ resources:
 # Dashboard
 ############################
 # Kubeflow Pipelines
-# errors on build with kustomize v3.2.0
 - ../apps/pipeline/upstream/env/platform-agnostic-multi-user
+
 # KFServing (minus autoscaler)
 - ../apps/kfserving/upstream/overlays/kubeflow
-# Katib
-# - ../apps/katib/upstream/installs/katib-with-kubeflow
+# Katib (with kustomize.toolkit.fluxcd.io/prune: disabled)
+# https://fluxcd.io/docs/faq/#how-to-patch-coredns-and-other-pre-installed-addons
+- ../apps/katib/upstream/installs/katib-with-kubeflow
+
 # Central Dashboard
 - ../apps/centraldashboard/upstream/overlays/istio
 # Admission Webhook

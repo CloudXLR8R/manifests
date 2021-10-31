@@ -3,6 +3,7 @@ kind: ValidatingWebhookConfiguration
 metadata:
   name: katib.kubeflow.org
   annotations:
+    kustomize.toolkit.fluxcd.io/prune: disabled
     cert-manager.io/inject-ca-from: $(KATIB_NAMESPACE)/$(KATIB_CERT_NAME)
 ---
 apiVersion: admissionregistration.k8s.io/v1
@@ -10,4 +11,5 @@ kind: MutatingWebhookConfiguration
 metadata:
   name: katib.kubeflow.org
   annotations:
+    kustomize.toolkit.fluxcd.io/prune: disabled
     cert-manager.io/inject-ca-from: $(KATIB_NAMESPACE)/$(KATIB_CERT_NAME)

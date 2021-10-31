@@ -5,4 +5,5 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: $(kfservingNamespace)/serving-cert
+    kustomize.toolkit.fluxcd.io/prune: disabled
   name: inferenceservices.serving.kubeflow.org

@@ -6,6 +6,7 @@ metadata:
   name: inferenceservice.serving.kubeflow.org
   annotations:
     cert-manager.io/inject-ca-from: $(kfservingNamespace)/serving-cert
+    kustomize.toolkit.fluxcd.io/prune: disabled
 webhooks:
   - name: inferenceservice.kfserving-webhook-server.defaulter
 ---
@@ -15,6 +16,7 @@ metadata:
   name: inferenceservice.serving.kubeflow.org
   annotations:
     cert-manager.io/inject-ca-from: $(kfservingNamespace)/serving-cert
+    kustomize.toolkit.fluxcd.io/prune: disabled
 webhooks:
   - name: inferenceservice.kfserving-webhook-server.validator
 ---
@@ -24,5 +26,6 @@ metadata:
   name: trainedmodel.serving.kubeflow.org
   annotations:
     cert-manager.io/inject-ca-from: $(kfservingNamespace)/serving-cert
+    kustomize.toolkit.fluxcd.io/prune: disabled
 webhooks:
   - name: trainedmodel.kfserving-webhook-server.validator
