@@ -9,12 +9,14 @@ namespace: kfserving-system
 #  someName: someValue
 
 bases:
+# manager depends on certmanager so let's add those resources first
+- ../certmanager
 - ../crd
 - ../configmap
 - ../rbac
 - ../manager
 - ../webhook
-- ../certmanager
+# - ../certmanager
 - ../web-app
 
   # Protect the /metrics endpoint by putting it behind auth.
