@@ -34,8 +34,8 @@ resources:
 # Kubeflow Pipelines
 # errors on build with kustomize v3.2.0
 - ../apps/pipeline/upstream/env/platform-agnostic-multi-user
-# KFServing
-# - ../apps/kfserving/upstream/overlays/kubeflow
+# KFServing (minus autoscaler)
+- ../apps/kfserving/upstream/overlays/kubeflow
 # Katib
 # - ../apps/katib/upstream/installs/katib-with-kubeflow
 # Central Dashboard
