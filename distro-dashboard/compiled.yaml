@@ -35422,6 +35422,8 @@ spec:
 apiVersion: cert-manager.io/v1alpha2
 kind: Certificate
 metadata:
+  annotations:
+    kustomize.toolkit.fluxcd.io/prune: disabled
   name: katib-webhook-cert
   namespace: kubeflow
 spec:
@@ -35451,6 +35453,8 @@ spec:
 apiVersion: cert-manager.io/v1alpha2
 kind: Issuer
 metadata:
+  annotations:
+    kustomize.toolkit.fluxcd.io/prune: disabled
   name: katib-selfsigned-issuer
   namespace: kubeflow
 spec:
